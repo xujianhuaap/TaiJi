@@ -10,7 +10,7 @@
     </parent>
     <groupId>cn.skullmind.io</groupId>
     <artifactId>server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>server</name>
     <description>Demo project for Spring Boot</description>
 
@@ -36,7 +36,24 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <name>Maven-Release</name>
+            <url>http://skullmind.cn:83/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
+
     <build>
+        <filters>
+            <filter>src/main/filters/filter.properties</filter>
+        </filters>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
