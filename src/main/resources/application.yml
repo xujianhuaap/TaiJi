@@ -1,0 +1,15 @@
+
+server-config:
+       name: hello
+       config-info:
+              name: server-config
+              servers:
+                     - url: 127.0.0.1:8081
+                       actived: true
+                     - url: 127.0.0.1:8082
+                       actived: false
+
+
+server:
+       address: 127.0.0.1
+       port: 8081
