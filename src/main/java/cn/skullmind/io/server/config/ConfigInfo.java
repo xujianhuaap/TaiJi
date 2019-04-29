@@ -5,6 +5,10 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 
 import java.util.List;
 
+/***
+ * @EnableConfigurationProperties 是对@ConfigurationProperties的支持，
+ * 快速将@ConfigurationProperties注解的类下的方法注册为@bean
+ */
 @ConfigurationProperties(prefix ="config-info")
 @EnableConfigurationProperties(value = ConfigInfo.class)
 public class ConfigInfo {
