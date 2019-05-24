@@ -1,9 +1,8 @@
-package cn.skullmind.io.server.index;
+package cn.skullmind.io.server.controller.index;
 
 import cn.skullmind.io.server.Arguments;
 import cn.skullmind.io.server.config.ServerConfig;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

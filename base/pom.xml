@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
-    <modules>
-        <module>server_web</module>
-        <module>server_mobile</module>
-    </modules>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.4.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <artifactId>server</artifactId>
+        <groupId>cn.skullmind.io</groupId>
+        <version>1.0.0</version>
     </parent>
-    <groupId>cn.skullmind.io</groupId>
-    <artifactId>server</artifactId>
-    <version>1.0.0</version>
-    <name>server</name>
-    <description>Demo project for Spring Boot</description>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>base</artifactId>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -50,11 +42,11 @@
             <optional>true</optional>
         </dependency>
         <!-- spring security       -->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-security</artifactId>-->
-<!--            <version>${spring.boot.version}</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-security</artifactId>-->
+        <!--            <version>${spring.boot.version}</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -92,14 +84,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <distributionManagement>
-        <repository>
-            <id>maven-releases</id>
-            <name>Maven-Release</name>
-            <url>http://skullmind.cn:83/repository/maven-releases/</url>
-        </repository>
-    </distributionManagement>
 
     <build>
         <filters>

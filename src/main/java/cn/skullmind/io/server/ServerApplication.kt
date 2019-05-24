@@ -1,14 +1,14 @@
-package cn.skullmind.io.server;
+package cn.skullmind.io.server
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity
-import org.springframework.security.config.annotation.web.builders.HttpSecurity
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
+//import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration
+//import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity
+//import org.springframework.security.config.annotation.web.builders.HttpSecurity
+//import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
+//import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter
+//import org.springframework.web.servlet.config.annotation.ViewControllerRegistry
+//import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 
 /***
  * kotlin 调用 java api
@@ -24,12 +24,6 @@ fun main( args:Array<String>) {
  */
 
 @SpringBootApplication
-@EnableGlobalMethodSecurity(securedEnabled = true)
-open class ServerApplication:WebMvcConfigurer {
-
-    override fun addViewControllers(registry: ViewControllerRegistry) {
-        super.addViewControllers(registry)
-    }
-
-}
+//@EnableGlobalMethodSecurity(securedEnabled = true)
+open class ServerApplication
 
