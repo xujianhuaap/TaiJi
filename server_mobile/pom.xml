@@ -11,5 +11,18 @@
 
     <artifactId>server_mobile</artifactId>
 
+    <properties>
+        <base.version>1.0.0</base.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>cn.skullmind.io</groupId>
+            <artifactId>base</artifactId>
+            <version>${base.version}</version>
+        </dependency>
+    </dependencies>
+
+
 
 </project>

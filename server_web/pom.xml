@@ -11,5 +11,58 @@
 
     <artifactId>server_web</artifactId>
 
+    <properties>
+        <base.version>1.0.0</base.version>
+    </properties>
 
+    <dependencies>
+        <!-- spring security       -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.skullmind.io</groupId>
+            <artifactId>base</artifactId>
+            <version>${base.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <filters>
+            <filter>src/main/filters/filter.properties</filter>
+        </filters>
+        <resources>
+            <resource>
+                <directory>src/main/resources/</directory>
+                <!--         是否过滤资源替换参数化标记       -->
+                <filtering>true</filtering>
+                <excludes>
+                    <exclude>static/**</exclude>
+                    <exclude>error/**</exclude>
+                    <exclude>templates/**</exclude>
+                </excludes>
+            </resource>
+
+            <resource>
+                <!--      相对target/classes          -->
+                <targetPath>resources/static/</targetPath>
+                <directory>src/main/resources/static</directory>
+            </resource>
+
+            <resource>
+                <targetPath>resources/error/</targetPath>
+                <directory>src/main/resources/error</directory>
+            </resource>
+            <resource>
+                <targetPath>resources/templates/</targetPath>
+                <directory>src/main/resources/templates</directory>
+            </resource>
+        </resources>
+    </build>
 </project>

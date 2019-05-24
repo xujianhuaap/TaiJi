@@ -31,22 +31,12 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
         <!-- 导入配置文件处理器，配置文件进行绑定就会有提示 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
-        <!-- spring security       -->
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.boot</groupId>-->
-        <!--            <artifactId>spring-boot-starter-security</artifactId>-->
-        <!--            <version>${spring.boot.version}</version>-->
-        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -85,39 +75,14 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <name>Maven-Release</name>
+            <url>http://skullmind.cn:83/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
     <build>
-        <filters>
-            <filter>src/main/filters/filter.properties</filter>
-        </filters>
-
-        <resources>
-            <resource>
-                <directory>src/main/resources/</directory>
-                <!--         是否过滤资源替换参数化标记       -->
-                <filtering>true</filtering>
-                <excludes>
-                    <exclude>static/**</exclude>
-                    <exclude>error/**</exclude>
-                    <exclude>templates/**</exclude>
-                </excludes>
-            </resource>
-
-            <resource>
-                <!--      相对target/classes          -->
-                <targetPath>resources/static/</targetPath>
-                <directory>src/main/resources/static</directory>
-            </resource>
-
-            <resource>
-                <targetPath>resources/error/</targetPath>
-                <directory>src/main/resources/error</directory>
-            </resource>
-            <resource>
-                <targetPath>resources/templates/</targetPath>
-                <directory>src/main/resources/templates</directory>
-            </resource>
-        </resources>
-
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
