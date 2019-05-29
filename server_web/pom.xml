@@ -64,5 +64,15 @@
                 <directory>src/main/resources/templates</directory>
             </resource>
         </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>cn.skullmind.io.web.WebApplicationKt</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>
