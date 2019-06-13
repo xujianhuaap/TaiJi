@@ -3,10 +3,10 @@ package cn.skullmind.io.geek.mapper
 interface BaseMapper <S,T>{
     /**
      * @Title 根据ID查询
-     * @param id
+     * @param pk
      * @return
      */
-    abstract fun findById(pk: S): T
+     fun findById(pk: S): T
 
     /**
      * @Title 根据对象插入数据
@@ -15,7 +15,7 @@ interface BaseMapper <S,T>{
      * @throws Exception
      * @return
      */
-    abstract fun insert(t: T): Int
+     fun insert(t: T): Int
 
     /**
      * @Title 根据PK删除
@@ -24,7 +24,7 @@ interface BaseMapper <S,T>{
      * @throws Exception
      * @return
      */
-    abstract fun delete(pk: S): Int
+     fun delete(pk: S): Int
 
     /**
      * @Title 根据用户修改
@@ -33,7 +33,7 @@ interface BaseMapper <S,T>{
      * @throws Exception
      * @return
      */
-    abstract fun update(t: T): Int
+     fun update(t: T): Int
 
     /***
      * @Title 根据条件查询数据
@@ -41,13 +41,5 @@ interface BaseMapper <S,T>{
      * 查询条件
      * @return 对象集合
      */
-    abstract fun findAllByFilter(map: Map<String, Any>): List<T>
-
-    /**
-     * @Title 根据条件查询数据记录数
-     * @param map
-     * 查询条件
-     * @return 记录数
-     */
-    abstract fun findAllByFilterCount(map: Map<String, Any>): Int
+     fun findAllByFilter(map: Map<String, Any>): List<T>
 }
