@@ -7,6 +7,7 @@
         <module>server_web</module>
         <module>server_mobile</module>
         <module>base</module>
+        <module>server_geek</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

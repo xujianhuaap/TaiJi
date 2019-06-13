@@ -1,7 +1,7 @@
 package cn.skullmind.io.mobile.controller.login
 
 import cn.skullmind.io.mobile.beans.UserInfo
-import cn.skullmind.io.mobile.http.Resp
+import cn.skullmind.io.base.http.Resp
 import cn.skullmind.io.mobile.service.UserInfoServiceImp
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*

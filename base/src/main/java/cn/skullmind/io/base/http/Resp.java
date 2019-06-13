@@ -1,4 +1,4 @@
-package cn.skullmind.io.mobile.http;
+package cn.skullmind.io.base.http;
 
 public class Resp<T> {
     private int code;
